@@ -69,6 +69,8 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: SyncSprite # Frontier
+  - type: AcousticData # VDS
+    absorption: 5
 
 - type: entity
   id: ConveyorBeltAssembly

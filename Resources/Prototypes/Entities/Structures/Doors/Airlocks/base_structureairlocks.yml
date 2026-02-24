@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: Airlock
   parent: BaseStructure
   name: airlock
@@ -203,6 +203,9 @@
     - WirePanels
     - Networking
   - type: ItemSlots # Wayfarer: Integration tests want this here since PaperLabel adds it if it isn't present
+  - type: AcousticData # VDS
+    absorption: 10
+    reflectRay: true
   - type: PaperLabel # Coyote
     labelSlot:
       insertVerbText: comp-paper-label-insert

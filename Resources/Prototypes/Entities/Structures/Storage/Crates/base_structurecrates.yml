@@ -97,6 +97,8 @@
       - entity_storage
   - type: RequireProjectileTarget
   - type: NFCrate # Frontier
+  - type: AcousticData # VDS
+    absorption: 10
 
 - type: entity
   parent: CrateGeneric

@@ -75,6 +75,8 @@
         rotationsEnabled: false
         volume: 1
 # End CS
+  - type: AcousticData # VDS
+    absorption: 10
 
 - type: entity
   id: PottedPlant0

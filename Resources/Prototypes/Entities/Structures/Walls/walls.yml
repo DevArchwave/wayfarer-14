@@ -10,7 +10,7 @@
     - Wall
   components:
   - type: Anchorable
-    flags: 
+    flags:
     - Anchorable
   - type: Rotatable
   - type: RangedDamageSound
@@ -55,6 +55,10 @@
     resistance: 2
   - type: BlockWeather
   - type: SunShadowCast
+  - type: AcousticData # VDS
+    absorption: 5
+    reflectRay: true
+
 
 - type: entity
   abstract: true
@@ -1377,6 +1381,9 @@
     fx: EffectRCDDeconstruct8 #Frontier
   - type: StaticPrice # Frontier
     price: 30 # Frontier
+  - type: AcousticData # VDS. wood absorb more!
+    absorption: 12
+    reflectRay: true
 
 - type: entity
   parent: BaseWall
@@ -1430,6 +1437,9 @@
     cost: 6 #Frontier
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
+  - type: AcousticData # VDS. web sticky
+    absorption: 22
+    reflectRay: true
 
 
 # Lavalend Walls
