@@ -1,0 +1,107 @@
+- type: entity
+  id: BorgChassisQuad
+  parent: BaseBorgChassisNT
+  components:
+  - type: Body
+    prototype: Borg
+  - type: Inventory
+    speciesId: Borg
+    templateId: borgquad
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Sprite
+    sprite: _HL/Mobs/Player/borgs/quads.rsi
+    scale: 0.7, 0.7
+    layers:
+    - state: quadsprite
+      map: ["movement"]
+    - state: quadspritel
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: quadspriter
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: quadsprite_moving
+    noMovementLayers:
+      movement:
+        state: quadsprite
+  - type: Stripping
+  - type: Strap
+    blacklist:
+      components:
+      - BorgChassis
+    position: Stand
+    buckleOffset: "0,-0.2"
+    buckleSelfDoafterTime: 4.5
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - RoboticsConsole
+  # - type: Sanitized # Wayfarer: removed
+  - type: Hands
+  - type: ComplexInteraction
+  - type: EncryptionKeyHolder
+    keySlots: 10
+    preserveExistingChannels: true
+    intrinsicChannels:
+    - Binary
+    - Trinary
+    - Science
+    - Common
+  - type: IntrinsicRadioTransmitter
+    intrinsicChannels:
+    - Binary
+    - Trinary
+    - Science
+    - Common
+  - type: ActiveRadio
+    intrinsicChannels:
+    - Binary
+    - Trinary
+    - Science
+    - Common
+  - type: BorgChassis
+    maxModules: 5
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - XenoborgModuleGeneric
+      - BorgModuleSyndicate
+      - BorgModuleSyndicateAssault
+    hasMindState: quadspritel
+    noMindState: quadspriter
+  - type: BorgTransponder
+    sprite:
+      sprite: _HL/Mobs/Player/borgs/quads.rsi
+      state: quadsprite
+    name: cyborg
+  - type: Construction
+    node: cyborg
+  - type: Speech
+    speechVerb: Robotic
+  # - type: LayingDown # Wayfarer: Removed
+  - type: AccessReader
+    access: [["Security"], ["Command"], ["Research"], ["Mercenary"]]
+  - type: SiliconLawProvider
+    laws: Qborg
+  # - type: LeashAnchor # Floofstation # Wayfarer: Removed
+  #   kind: Intrinsic # Wayfarer: Removed
+  - type: InteractionPopup
+    interactSuccessString: petting-success-generic-cyborg
+    interactFailureString: petting-failure-generic-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
