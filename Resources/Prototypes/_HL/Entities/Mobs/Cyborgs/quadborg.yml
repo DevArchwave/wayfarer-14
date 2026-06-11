@@ -105,3 +105,4 @@
     interactFailureString: petting-failure-generic-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  # Wayfarer: We don't want ballz
