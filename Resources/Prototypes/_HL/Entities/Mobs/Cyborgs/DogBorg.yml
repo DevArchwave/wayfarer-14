@@ -27,8 +27,8 @@
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
   - type: EncryptionKeyHolder
     keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
+    # preserveExistingChannels: true # Wayfarer: None
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - ColSec
@@ -37,7 +37,7 @@
     - Common
     - Faction
   - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - ColSec
@@ -46,7 +46,7 @@
     - Common
     - Faction
   - type: ActiveRadio
-    intrinsicChannels:
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - ColSec
@@ -61,7 +61,7 @@
       tags:
       - BorgModuleGeneric
       - XenoborgModuleGeneric
-      - BorgModuleSecurity
+      # - BorgModuleSecurity # Wayfarer: TODO
       - BorgModuleSyndicate
       - BorgModuleSyndicateAssault
       - BorgModuleMedical

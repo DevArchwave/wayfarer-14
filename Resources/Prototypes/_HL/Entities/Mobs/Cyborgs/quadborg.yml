@@ -46,7 +46,7 @@
       - BorgChassis
     position: Stand
     buckleOffset: "0,-0.2"
-    buckleSelfDoafterTime: 4.5
+    buckleDoafterTime: 4.5
   - type: LockingWhitelist
     blacklist:
       components:
@@ -56,20 +56,20 @@
   - type: ComplexInteraction
   - type: EncryptionKeyHolder
     keySlots: 10
-    preserveExistingChannels: true
-    intrinsicChannels:
+    # preserveExistingChannels: true # Wayfarer: None
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - Science
     - Common
   - type: IntrinsicRadioTransmitter
-    intrinsicChannels:
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - Science
     - Common
   - type: ActiveRadio
-    intrinsicChannels:
+    channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     - Trinary
     - Science
