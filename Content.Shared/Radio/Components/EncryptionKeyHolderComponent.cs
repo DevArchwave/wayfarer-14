@@ -46,6 +46,7 @@ public sealed partial class EncryptionKeyHolderComponent : Component
     ///     Combined set of radio channels provided by all contained keys.
     /// </summary>
     [ViewVariables]
+    [DataField("channels")] // Hardlight
     public HashSet<string> Channels = new();
 
     /// <summary>

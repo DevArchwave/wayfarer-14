@@ -30,30 +30,30 @@
     # preserveExistingChannels: true # Wayfarer: None
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
-    - Trinary
-    - ColSec
+    # - Trinary # Wayfarer: removed Trinary
+    # - ColSec # Wayfarer: No ColSec
     - Security
     - Science
     - Common
-    - Faction
+    # - Faction # Wayfarer: No Faction
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
-    - Trinary
-    - ColSec
+    # - Trinary # Wayfarer: removed Trinary
+    # - ColSec # Wayfarer: No ColSec
     - Security
     - Science
     - Common
-    - Faction
+    # - Faction # Wayfarer: No Faction
   - type: ActiveRadio
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
-    - Trinary
-    - ColSec
+    # - Trinary # Wayfarer: removed Trinary
+    # - ColSec # Wayfarer: No ColSec
     - Security
     - Science
     - Common
-    - Faction
+    # - Faction # Wayfarer: No Faction
   # HardLight end
   - type: BorgChassis
     maxModules: 7
@@ -61,7 +61,7 @@
       tags:
       - BorgModuleGeneric
       - XenoborgModuleGeneric
-      # - BorgModuleSecurity # Wayfarer: TODO
+      - BorgModuleSecurity
       - BorgModuleSyndicate
       - BorgModuleSyndicateAssault
       - BorgModuleMedical
