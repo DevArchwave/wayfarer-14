@@ -226,20 +226,20 @@
   #   channels: # Wayfarer: intrinsicChannels<channels
   #   - Binary
   #   # - Trinary # Wayfarer: removed Trinary
-  #   - Syndicate
+  #   - Freelance # Wayfarer: Syndicate<Freelance
   #   - Common
   # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     # - Trinary # Wayfarer: removed Trinary
-    - Syndicate
+    - Freelance # Wayfarer: Syndicate<Freelance
     - Common
   - type: ActiveRadio
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     # - Trinary # Wayfarer: removed Trinary
-    - Syndicate
+    - Freelance # Wayfarer: Syndicate<Freelance
     - Common
   # HardLight end
   - type: NpcFactionMember
