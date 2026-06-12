@@ -54,14 +54,16 @@
   # - type: Sanitized # Wayfarer: removed
   - type: Hands
   - type: ComplexInteraction
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Science
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Science
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -140,27 +142,29 @@
       movement:
         state: quadsprite
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Security
-    - Science
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Nfsd # Wayfarer: Security<Nfsd
+  #   - Science
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     # - Trinary # Wayfarer: removed Trinary
-    - Security
+    - Nfsd # Wayfarer: Security<Nfsd
     - Science
     - Common
   - type: ActiveRadio
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     # - Trinary # Wayfarer: removed Trinary
-    - Security
+    - Nfsd # Wayfarer: Security<Nfsd
     - Science
     - Common
   # HardLight end
@@ -215,14 +219,16 @@
       movement:
         state: SyndQuad
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Syndicate
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Syndicate
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -271,177 +277,183 @@
   #   movementStateOn: SyndQuad_movingballz
   # End Wayfarer
 
-- type: entity
-  id: assaultQuad
-  parent: [SyndiQuad]
-  components:
-  - type: Sprite
-    sprite: _HL/Mobs/Player/borgs/quads.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: assaultquad
-      map: ["movement"]
-    - state: assaultquadr
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: assaultquadl
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: BorgChassis
-    maxModules: 8
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleSecurity
-      - BorgModuleMedical
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: assaultquadr
-    noMindState: assaultquadl
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: assaultquad_moving
-    noMovementLayers:
-      movement:
-        state: assaultquad
-  - type: BorgTransponder
-    sprite:
-      sprite: _HL/Mobs/Player/borgs/quads.rsi
-      state: assaultquad
-    name: cyborg
-  # Wayfarer: We don't want ballz
-  # - type: SpriteStateToggle
-  #   spriteLayer: movement
-  #   stateOff: assaultquad
-  #   stateOn: assaultquadballz
-  #   movementStateOff: assaultquad_moving
-  #   movementStateOn: assaultquad_movingballz
-  # End Wayfarer
+# Wayfarer: Removed Hardlight's patreons borg
+# - type: entity
+#   id: assaultQuad
+#   parent: [SyndiQuad]
+#   components:
+#   - type: Sprite
+#     sprite: _HL/Mobs/Player/borgs/quads.rsi
+#     scale: 0.7, 0.7
+#     layers:
+#     - state: assaultquad
+#       map: ["movement"]
+#     - state: assaultquadr
+#       map: ["enum.BorgVisualLayers.Light"]
+#       shader: unshaded
+#       visible: false
+#     - state: assaultquadl
+#       shader: unshaded
+#       map: ["light"]
+#       visible: false
+#   - type: BorgChassis
+#     maxModules: 8
+#     moduleWhitelist:
+#       tags:
+#       - BorgModuleGeneric
+#       - BorgModuleSecurity
+#       - BorgModuleMedical
+#       - BorgModuleSyndicate
+#       - BorgModuleSyndicateAssault
+#       - XenoborgModuleGeneric
+#     hasMindState: assaultquadr
+#     noMindState: assaultquadl
+#   - type: SpriteMovement
+#     movementLayers:
+#       movement:
+#         state: assaultquad_moving
+#     noMovementLayers:
+#       movement:
+#         state: assaultquad
+#   - type: BorgTransponder
+#     sprite:
+#       sprite: _HL/Mobs/Player/borgs/quads.rsi
+#       state: assaultquad
+#     name: cyborg
+#   # Wayfarer: We don't want ballz
+#   # - type: SpriteStateToggle
+#   #   spriteLayer: movement
+#   #   stateOff: assaultquad
+#   #   stateOn: assaultquadballz
+#   #   movementStateOff: assaultquad_moving
+#   #   movementStateOn: assaultquad_movingballz
+#   # End Wayfarer
+# End Wayfarer
 
-- type: entity
-  id: chewsborg
-  parent: [SyndiQuad]
-  components:
-  - type: Sprite
-    sprite: _HL/Mobs/Player/borgs/quads.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: chews
-      map: ["movement"]
-    - state: chewsr
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: chewsl
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: BorgChassis
-    maxModules: 8
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleSecurity
-      - BorgModuleMedical
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: chewsr
-    noMindState: chews
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: chews_moving
-    noMovementLayers:
-      movement:
-        state: chews
-  - type: BorgTransponder
-    sprite:
-      sprite: _HL/Mobs/Player/borgs/quads.rsi
-      state: chews
-    name: cyborg
-  # Wayfarer: We don't want ballz
-  # - type: SpriteStateToggle
-  #   spriteLayer: movement
-  #   stateOff: chews
-  #   stateOn: chewsballz
-  #   movementStateOff: chews_moving
-  #   movementStateOn: chews_movingballz
-  # End Wayfarer
+# Wayfarer: Removed Hardlight's patreons borg
+# - type: entity
+#   id: chewsborg
+#   parent: [SyndiQuad]
+#   components:
+#   - type: Sprite
+#     sprite: _HL/Mobs/Player/borgs/quads.rsi
+#     scale: 0.7, 0.7
+#     layers:
+#     - state: chews
+#       map: ["movement"]
+#     - state: chewsr
+#       map: ["enum.BorgVisualLayers.Light"]
+#       shader: unshaded
+#       visible: false
+#     - state: chewsl
+#       shader: unshaded
+#       map: ["light"]
+#       visible: false
+#   - type: BorgChassis
+#     maxModules: 8
+#     moduleWhitelist:
+#       tags:
+#       - BorgModuleGeneric
+#       - BorgModuleSecurity
+#       - BorgModuleMedical
+#       - BorgModuleSyndicate
+#       - BorgModuleSyndicateAssault
+#       - XenoborgModuleGeneric
+#     hasMindState: chewsr
+#     noMindState: chews
+#   - type: SpriteMovement
+#     movementLayers:
+#       movement:
+#         state: chews_moving
+#     noMovementLayers:
+#       movement:
+#         state: chews
+#   - type: BorgTransponder
+#     sprite:
+#       sprite: _HL/Mobs/Player/borgs/quads.rsi
+#       state: chews
+#     name: cyborg
+#   # Wayfarer: We don't want ballz
+#   # - type: SpriteStateToggle
+#   #   spriteLayer: movement
+#   #   stateOff: chews
+#   #   stateOn: chewsballz
+#   #   movementStateOff: chews_moving
+#   #   movementStateOn: chews_movingballz
+#   # End Wayfarer
+# End Wayfarer
 
-- type: entity
-  id: wolfborg
-  parent: [BorgChassisApex]
-  components:
-  - type: Sprite
-    sprite: _HL/Mobs/Player/borgs/quads.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: wolfdog
-      map: ["movement"]
-    - state: wolfdogr
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: wolfdogl
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: BorgChassis
-    maxModules: 8
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleSecurity
-      - BorgModuleMedical
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: wolfdogr
-    noMindState: wolfdogl
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: wolfdog_moving
-    noMovementLayers:
-      movement:
-        state: wolfdog
-  - type: BorgTransponder
-    sprite:
-      sprite: _HL/Mobs/Player/borgs/quads.rsi
-      state: wolfdog
-    name: cyborg
-  # Wayfarer: We don't want ballz
-  # - type: SpriteStateToggle
-  #   spriteLayer: movement
-  #   stateOff: wolfdog
-  #   stateOn: wolfdogballz
-  #   movementStateOff: wolfdog_moving
-  #   movementStateOn: wolfdog_movingballz
-  # End Wayfarer
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: BarestepHard
-  - type: Speech
-    speechSounds: Vulpkanin
-    speechVerb: Vulpkanin
-    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Awoo', 'Purr' ]     # Wayfarer: *breathes in* Removed Gekkers, Pout, Yip, and Yap
-  - type: Vocal
-    sounds:
-      Male: MaleVulpkanin
-      Female: FemaleVulpkanin
-      Unsexed: MaleVulpkanin
-  - type: InteractionPopup
-    successChance: 0.5
-    interactSuccessString: petting-success-soft-floofy
-    interactFailureString: petting-failure-generic
-    interactSuccessSpawn: EffectHearts
-    interactSuccessSound:
-      path: /Audio/Floof/Voice/Vulpkanin/yap.ogg
+# Wayfarer: Removed Hardlight's patreons borg
+# - type: entity
+#   id: wolfborg
+#   parent: [BorgChassisApex]
+#   components:
+#   - type: Sprite
+#     sprite: _HL/Mobs/Player/borgs/quads.rsi
+#     scale: 0.7, 0.7
+#     layers:
+#     - state: wolfdog
+#       map: ["movement"]
+#     - state: wolfdogr
+#       map: ["enum.BorgVisualLayers.Light"]
+#       shader: unshaded
+#       visible: false
+#     - state: wolfdogl
+#       shader: unshaded
+#       map: ["light"]
+#       visible: false
+#   - type: BorgChassis
+#     maxModules: 8
+#     moduleWhitelist:
+#       tags:
+#       - BorgModuleGeneric
+#       - BorgModuleSecurity
+#       - BorgModuleMedical
+#       - BorgModuleSyndicate
+#       - BorgModuleSyndicateAssault
+#       - XenoborgModuleGeneric
+#     hasMindState: wolfdogr
+#     noMindState: wolfdogl
+#   - type: SpriteMovement
+#     movementLayers:
+#       movement:
+#         state: wolfdog_moving
+#     noMovementLayers:
+#       movement:
+#         state: wolfdog
+#   - type: BorgTransponder
+#     sprite:
+#       sprite: _HL/Mobs/Player/borgs/quads.rsi
+#       state: wolfdog
+#     name: cyborg
+#   # Wayfarer: We don't want ballz
+#   # - type: SpriteStateToggle
+#   #   spriteLayer: movement
+#   #   stateOff: wolfdog
+#   #   stateOn: wolfdogballz
+#   #   movementStateOff: wolfdog_moving
+#   #   movementStateOn: wolfdog_movingballz
+#   # End Wayfarer
+#   - type: FootstepModifier
+#     footstepSoundCollection:
+#       collection: BarestepHard
+#   - type: Speech
+#     speechSounds: Vulpkanin
+#     speechVerb: Vulpkanin
+#     allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Awoo', 'Purr' ]     # Wayfarer: *breathes in* Removed Gekkers, Pout, Yip, and Yap
+#   - type: Vocal
+#     sounds:
+#       Male: MaleVulpkanin
+#       Female: FemaleVulpkanin
+#       Unsexed: MaleVulpkanin
+#   - type: InteractionPopup
+#     successChance: 0.5
+#     interactSuccessString: petting-success-soft-floofy
+#     interactFailureString: petting-failure-generic
+#     interactSuccessSpawn: EffectHearts
+#     interactSuccessSound:
+#       path: /Audio/Floof/Voice/Vulpkanin/yap.ogg
+# End Wayfarer
 
 - type: entity
   id: BorgChassisQuadCC
@@ -462,26 +474,28 @@
       map: ["light"]
       visible: false
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Command
-    - Security
-    - Medical
-    - Engineering
-    - Science
-    - Supply
-    - Service
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Command
+  #   - Nfsd # Wayfarer: Security<Nfsd
+  #   - Medical
+  #   - Engineering
+  #   - Science
+  #   - Supply
+  #   - Service
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
     # - Trinary # Wayfarer: removed Trinary
     - Command
-    - Security
+    - Nfsd # Wayfarer: Security<Nfsd
     - Medical
     - Engineering
     - Science
@@ -493,7 +507,7 @@
     - Binary
     # - Trinary # Wayfarer: removed Trinary
     - Command
-    - Security
+    - Nfsd # Wayfarer: Security<Nfsd
     - Medical
     - Engineering
     - Science
@@ -565,15 +579,17 @@
       movement:
         state: quadspritesalv
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Science
-    - Supply
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Science
+  #   - Supply
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -639,15 +655,17 @@
       movement:
         state: quadspriteserv
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Science
-    - Service
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Science
+  #   - Service
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -719,15 +737,17 @@
       movement:
         state: engieborg
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Engineering
-    - Science
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Engineering
+  #   - Science
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -797,15 +817,17 @@
       movement:
         state: quadspritemed
   # HardLight start: Added encryption key slots in addition to intrinsic radio channels.
-  - type: EncryptionKeyHolder
-    keySlots: 10
-    # preserveExistingChannels: true # Wayfarer: None
-    channels: # Wayfarer: intrinsicChannels<channels
-    - Binary
-    # - Trinary # Wayfarer: removed Trinary
-    - Medical
-    - Science
-    - Common
+  # Wayfarer: Use Instrinsic and ActiveRadio instead
+  # - type: EncryptionKeyHolder
+  #   keySlots: 10
+  #   # preserveExistingChannels: true # Wayfarer: None
+  #   channels: # Wayfarer: intrinsicChannels<channels
+  #   - Binary
+  #   # - Trinary # Wayfarer: removed Trinary
+  #   - Medical
+  #   - Science
+  #   - Common
+  # End Wayfarer
   - type: IntrinsicRadioTransmitter
     channels: # Wayfarer: intrinsicChannels<channels
     - Binary
@@ -873,111 +895,115 @@
     # - RobotTalk
     # - Sign
 
-- type: entity
-  id: BorgChassisApex
-  parent: BorgChassisQuadCC
-  components:
-  - type: Sprite
-    sprite: _HL/Mobs/Player/borgs/quads.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: Apex
-      map: ["movement"]
-    - state: quadspritel
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspriter
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: Apex_moving
-    noMovementLayers:
-      movement:
-        state: Apex
-  - type: BorgChassis
-    maxModules: 10
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleMedical
-      - BorgModuleService
-      - BorgModuleSecurity
-      - BorgModuleCargo
-      - BorgModuleEngineering
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritel
-    noMindState: quadspriter
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  # Wayfarer: We don't want ballz
-  # - type: SpriteStateToggle
-  #   spriteLayer: movement
-  #   stateOff: Apex
-  #   stateOn: Apexballz
-  #   movementStateOff: Apex_moving
-  #   movementStateOn: Apex_movingballz
-  # End Wayfarer
+# Wayfarer: Removed Hardlight's patreons borg
+# - type: entity
+#   id: BorgChassisApex
+#   parent: BorgChassisQuadCC
+#   components:
+#   - type: Sprite
+#     sprite: _HL/Mobs/Player/borgs/quads.rsi
+#     scale: 0.7, 0.7
+#     layers:
+#     - state: Apex
+#       map: ["movement"]
+#     - state: quadspritel
+#       map: ["enum.BorgVisualLayers.Light"]
+#       shader: unshaded
+#       visible: false
+#     - state: quadspriter
+#       shader: unshaded
+#       map: ["light"]
+#       visible: false
+#   - type: SpriteMovement
+#     movementLayers:
+#       movement:
+#         state: Apex_moving
+#     noMovementLayers:
+#       movement:
+#         state: Apex
+#   - type: BorgChassis
+#     maxModules: 10
+#     moduleWhitelist:
+#       tags:
+#       - BorgModuleGeneric
+#       - BorgModuleMedical
+#       - BorgModuleService
+#       - BorgModuleSecurity
+#       - BorgModuleCargo
+#       - BorgModuleEngineering
+#       - BorgModuleSyndicate
+#       - BorgModuleSyndicateAssault
+#       - XenoborgModuleGeneric
+#     hasMindState: quadspritel
+#     noMindState: quadspriter
+#   - type: AccessReader
+#     access: [["CentralCommand"]]
+#   - type: SiliconLawProvider
+#     laws: Qborg
+#   # Wayfarer: We don't want ballz
+#   # - type: SpriteStateToggle
+#   #   spriteLayer: movement
+#   #   stateOff: Apex
+#   #   stateOn: Apexballz
+#   #   movementStateOff: Apex_moving
+#   #   movementStateOn: Apex_movingballz
+#   # End Wayfarer
+# End Wayfarer
 
-- type: entity
-  id: BorgChassisChip
-  parent: BorgChassisQuadCC
-  components:
-  - type: Sprite
-    sprite: _HL/Mobs/Player/borgs/quads.rsi
-    scale: 0.7, 0.7
-    layers:
-    - state: chip_quadsprite
-      map: ["movement"]
-    - state: quadspritel
-      map: ["enum.BorgVisualLayers.Light"]
-      shader: unshaded
-      visible: false
-    - state: quadspriter
-      shader: unshaded
-      map: ["light"]
-      visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: chip_quadsprite_moving
-    noMovementLayers:
-      movement:
-        state: chip_quadsprite
-  - type: BorgChassis
-    maxModules: 10
-    moduleWhitelist:
-      tags:
-      - BorgModuleGeneric
-      - BorgModuleMedical
-      - BorgModuleService
-      - BorgModuleSecurity
-      - BorgModuleCargo
-      - BorgModuleEngineering
-      - BorgModuleSyndicate
-      - BorgModuleSyndicateAssault
-      - XenoborgModuleGeneric
-    hasMindState: quadspritel
-    noMindState: quadspriter
-  - type: AccessReader
-    access: [["CentralCommand"]]
-  - type: SiliconLawProvider
-    laws: Qborg
-  # Wayfarer: We don't want ballz
-  # - type: SpriteStateToggle
-  #   spriteLayer: movement
-  #   stateOff: chip_quadsprite
-  #   stateOn: chip_quadspriteballz
-  #   movementStateOff: chip_quadsprite
-  #   movementStateOn: chip_quadsprite_movingballz
-  # End Wayfarer
+# Wayfarer: Removed Hardlight's patreons borg
+# - type: entity
+#   id: BorgChassisChip
+#   parent: BorgChassisQuadCC
+#   components:
+#   - type: Sprite
+#     sprite: _HL/Mobs/Player/borgs/quads.rsi
+#     scale: 0.7, 0.7
+#     layers:
+#     - state: chip_quadsprite
+#       map: ["movement"]
+#     - state: quadspritel
+#       map: ["enum.BorgVisualLayers.Light"]
+#       shader: unshaded
+#       visible: false
+#     - state: quadspriter
+#       shader: unshaded
+#       map: ["light"]
+#       visible: false
+#   - type: SpriteMovement
+#     movementLayers:
+#       movement:
+#         state: chip_quadsprite_moving
+#     noMovementLayers:
+#       movement:
+#         state: chip_quadsprite
+#   - type: BorgChassis
+#     maxModules: 10
+#     moduleWhitelist:
+#       tags:
+#       - BorgModuleGeneric
+#       - BorgModuleMedical
+#       - BorgModuleService
+#       - BorgModuleSecurity
+#       - BorgModuleCargo
+#       - BorgModuleEngineering
+#       - BorgModuleSyndicate
+#       - BorgModuleSyndicateAssault
+#       - XenoborgModuleGeneric
+#     hasMindState: quadspritel
+#     noMindState: quadspriter
+#   - type: AccessReader
+#     access: [["CentralCommand"]]
+#   - type: SiliconLawProvider
+#     laws: Qborg
+#   # Wayfarer: We don't want ballz
+#   # - type: SpriteStateToggle
+#   #   spriteLayer: movement
+#   #   stateOff: chip_quadsprite
+#   #   stateOn: chip_quadspriteballz
+#   #   movementStateOff: chip_quadsprite
+#   #   movementStateOn: chip_quadsprite_movingballz
+#   # End Wayfarer
+# End Wayfarer
 
 - type: entity
   parent: [ BaseXenoborgChassis, BaseXenoborgTransponder ]
