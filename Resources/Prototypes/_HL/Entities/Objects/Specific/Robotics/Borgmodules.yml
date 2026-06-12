@@ -42,7 +42,7 @@
     moduleId: Combat
     # Wayfarer: use hands
     hands:
-      - item: WeaponAdvancedLaser
+      # - item: WeaponAdvancedLaser # Wayfarer: broken
       - item: WeaponborgPistolMk58
       - item: CombatKnife
     # End Wayfarer
