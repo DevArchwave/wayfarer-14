@@ -4785,3 +4785,168 @@ Entries:
   id: 7054
   time: '2026-06-26T03:24:59.0000000+00:00'
   url: https://github.com/project-wayfarer/wayfarer-14/pull/1159
+- author: amareyeen
+  changes:
+    - type: Add
+      message: PMC armored jackets as alternative loadouts to the Merc web vests
+  id: 7055
+  time: '2026-06-26T04:18:11.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1230
+- author: DevArchwave
+  changes:
+    - type: Remove
+      message: Removed the trade mall.
+    - type: Tweak
+      message: Cargo depots have been revamped.
+  id: 7056
+  time: '2026-06-26T18:16:39.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/993
+- author: Possumongus
+  changes:
+    - type: Tweak
+      message: Made gas canisters and nades more expensive
+    - type: Tweak
+      message: Rebalanced andesite and chromite asteroids to be more useful
+  id: 7057
+  time: '2026-06-27T02:17:24.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1200
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Physical projectiles have been returned to their previous tuning.
+  id: 7058
+  time: '2026-06-27T08:22:15.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1243
+- author: DevArchwave
+  changes:
+    - type: Remove
+      message: Removed North Star Gloves and Caveman Club from Loot Tables.
+  id: 7059
+  time: '2026-06-27T08:22:57.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1245
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Stamina damage projectiles have been tweaked slightly to do more damage.
+    - type: Tweak
+      message: The esword was tweaked to do a little less damage.
+  id: 7060
+  time: '2026-06-28T20:55:18.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1255
+- author: Luweth
+  changes:
+    - type: Add
+      message: Added Copperskree salvage ship!
+  id: 7061
+  time: '2026-06-28T20:56:30.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1253
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: >-
+        Wayfarers can now change their job titles and icons directly from their
+        IDs.
+  id: 7062
+  time: '2026-06-28T20:56:56.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1251
+- author: Luweth
+  changes:
+    - type: Add
+      message: Added Cracked and Pirate PDAs to loadouts.
+    - type: Tweak
+      message: Changed Red PDA vales slightly and updated descriptions.
+  id: 7063
+  time: '2026-06-28T20:58:33.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1250
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: >-
+        Added a magnet to the cooking bag and a new set of sprites, courtesy of
+        Roy.
+    - type: Fix
+      message: Fixed the cooking bag. Now it can actually pick up food items.
+  id: 7064
+  time: '2026-06-28T21:00:05.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1249
+- author: VVersengt
+  changes:
+    - type: Tweak
+      message: Adjusted Svalinn laser pistol stats.
+  id: 7065
+  time: '2026-06-28T21:01:56.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1247
+- author: VVersengt
+  changes:
+    - type: Fix
+      message: 'Fixed ERROR facehugger sprite. '
+  id: 7066
+  time: '2026-06-28T21:05:12.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1223
+- author: VVersengt
+  changes:
+    - type: Fix
+      message: >-
+        Wheeled vehicles can no longer be driven in space. Grab a hoverbike or
+        equivalent if you wanna do that!
+  id: 7067
+  time: '2026-06-28T21:07:02.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1222
+- author: VVersengt
+  changes:
+    - type: Tweak
+      message: Turrets will now target you through crates and windows.
+    - type: Tweak
+      message: >-
+        Turrets now turn slower, have a longer range and are less accurate for
+        their first few shots.
+  id: 7068
+  time: '2026-06-28T21:09:07.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1193
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Pacifism is no longer tied to Pious.
+    - type: Tweak
+      message: >-
+        Only Pious characters with the Pacifism trait can use religious books'
+        innate ability to heal others.
+  id: 7069
+  time: '2026-06-28T21:12:18.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1189
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: >-
+        The ID that can change its job title and icon on the fly must be
+        purchased from a PTECH.
+  id: 7070
+  time: '2026-06-28T23:30:10.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1258
+- author: VVersengt
+  changes:
+    - type: Add
+      message: Added new bounties, machines and content for Outlaws
+    - type: Tweak
+      message: >-
+        Changed smuggling alert to be equal for both sides with a few minutes of
+        variance in-between.
+    - type: Tweak
+      message: Changed some flavor text related to dead drops.
+  id: 7071
+  time: '2026-06-29T05:45:08.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1259
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Emergency Responders now have access to a wider variety of clothes.
+  id: 7072
+  time: '2026-06-29T05:45:29.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1260
+- author: DevArchwave
+  changes:
+    - type: Tweak
+      message: Lowered the respawn cooldown.
+  id: 7073
+  time: '2026-06-29T05:49:57.0000000+00:00'
+  url: https://github.com/project-wayfarer/wayfarer-14/pull/1261

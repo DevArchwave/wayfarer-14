@@ -765,6 +765,9 @@
   - WFClothingOuterVestWebMercenary
   - WFClothingOuterVestWebMercenaryBlack
   - WFClothingOuterArmorCaptainCarapace
+  - MercenaryClothingOuterArmoredJacketPMCBlue
+  - MercenaryClothingOuterArmoredJacketPMCGreen
+  - MercenaryClothingOuterArmoredJacketPMCOlive
   # Winter Coats
   - WFClothingOuterWinterCoat
   - WFClothingOuterWinterCoatLong
@@ -1498,6 +1501,8 @@
   - WFJesterPDA
   - WFSyndiAgentPDA
   - WFSyndiPDA
+  - WFPiratePDA
+  - WFCrackedPDA
 
 
   fallbacks:
