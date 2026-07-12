@@ -2139,7 +2139,7 @@ entities:
       parent: 1
     - type: AtmosPipeColor
       color: '#0055CCFF'
-- proto: GasMixerFlipped
+- proto: GasMixerOnFlipped
   entities:
   - uid: 262
     components:
