@@ -132,11 +132,11 @@
           prob: 1
         # Machine upgrades
         - id: SalvagePartsT2Spawner
-          prob: 0.1
+          prob: 0.2 # Wayfarer: 0.1<0.2
         - id: SalvagePartsT3Spawner
-          prob: 0.05
+          prob: 0.1 # Wayfarer: 0.05<0.1
         - id: SalvagePartsT4Spawner
-          prob: 0.01
+          prob: 0.05 # Wayfarer: 0.01<0.05
         # Big loot
         - id: NFSalvageBrassFurnitureSpawner
           prob: 0.03
