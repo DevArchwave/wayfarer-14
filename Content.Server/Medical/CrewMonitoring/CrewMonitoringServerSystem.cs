@@ -79,13 +79,31 @@ public sealed class CrewMonitoringServerSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
-
+        /*  // Wayfarer: Commented this in favor of the logic below.
+            // This seems to be causing an exception when a sensor needs to be removed, because it's removing it from the loop while it is running?
+            // Instead, we collect keys and remove after the loop. Should do the trick.
         foreach (var (address, sensor) in component.SensorStatus)
         {
             var dif = _gameTiming.CurTime - sensor.Timestamp;
             if (dif.Seconds > component.SensorTimeout)
                 component.SensorStatus.Remove(address);
         }
+        */
+        // Wayfarer Start
+        var toRemove = new List<string>();
+        var now = _gameTiming.CurTime;
+
+        foreach (var (address, sensor) in component.SensorStatus)
+        {
+            if ((now - sensor.Timestamp).TotalSeconds > component.SensorTimeout)
+                toRemove.Add(address);
+        }
+
+        foreach (var address in toRemove)
+        {
+            component.SensorStatus.Remove(address);
+        }
+        // End Wayfarer
     }
 
     /// <summary>
