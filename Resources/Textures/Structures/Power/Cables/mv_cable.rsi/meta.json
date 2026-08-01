@@ -6,7 +6,6 @@
     },
     "license": "CC-BY-SA-3.0",
     "copyright": "By MIXnikita (Github) for SS220. Relicensed under CC-BY-SA-3.0 by request.",
-    "copyright_extra": "mvstripes Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/fcf375d7d9ce6ceed5c7face899725e5655ab640",
     "states": [
         {
             "name": "mvcable_0"
@@ -70,70 +69,6 @@
         },
         {
             "name": "mvcable_15"
-
-        },
-        {
-            "name": "mvstripes_0"
-
-        },
-        {
-            "name": "mvstripes_1"
-
-        },
-        {
-            "name": "mvstripes_2"
-
-        },
-        {
-            "name": "mvstripes_3"
-
-        },
-        {
-            "name": "mvstripes_4"
-
-        },
-        {
-            "name": "mvstripes_5"
-
-        },
-        {
-            "name": "mvstripes_6"
-
-        },
-        {
-            "name": "mvstripes_7"
-
-        },
-        {
-            "name": "mvstripes_8"
-
-        },
-        {
-            "name": "mvstripes_9"
-
-        },
-        {
-            "name": "mvstripes_10"
-
-        },
-        {
-            "name": "mvstripes_11"
-
-        },
-        {
-            "name": "mvstripes_12"
-
-        },
-        {
-            "name": "mvstripes_13"
-
-        },
-        {
-            "name": "mvstripes_14"
-
-        },
-        {
-            "name": "mvstripes_15"
 
         }
     ]
