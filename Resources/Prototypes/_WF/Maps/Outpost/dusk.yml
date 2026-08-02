@@ -35,6 +35,7 @@
         availableJobs:
           Wayfarer: [ -1, -1 ]
           Borg: [ -1, -1 ]
+          ServiceQuadBorg: [ 3, 3 ]
           StationRepresentative: [ 1, 1 ]
           StationTrafficController: [ 1, 1 ]
           Valet: [ 3, 3 ]
@@ -42,6 +43,7 @@
           MailCarrier: [ 5, 5 ]
           DirectorOfCare: [ 1, 1 ] ## temporary bandaid
           MedicalER: [ -1, -1 ]
+          MedicalQuadBorg: [ -1, -1 ]
         tags:
         - HeadOfPersonnel
         - HeadOfSecurity
