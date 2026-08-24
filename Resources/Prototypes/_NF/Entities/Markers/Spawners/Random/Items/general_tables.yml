@@ -569,6 +569,7 @@
       - id: VendingMachineAutoTuneVend
       - id: VendingMachinePottedPlantVend
       - id: WaterCooler
+      - id: VendingMachineBarista # Mono
       - id: VendingMachinePosterPrinter
       - id: VendingMachinePosterPrinterNanotrasen
       - id: VendingMachinePaintingPrinter

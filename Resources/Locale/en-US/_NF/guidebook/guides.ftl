@@ -10,7 +10,8 @@ guide-entry-sector-topology = Sector Topology
 guide-entry-cargo-hauling = Cargo Hauling
 guide-entry-shipyard = Shipyard
 guide-entry-shipyard-civilian = Civilian ships
-guide-entry-shipyard-staff = Frontier Staff ships
+# Wayfarer: Renamed to Dusk Staff
+guide-entry-shipyard-staff = Dusk Staff ships
 guide-entry-shipyard-medical = Medical ships
 guide-entry-shipyard-expedition = Expedition ships
 guide-entry-shipyard-nfsd = NFSD ships
